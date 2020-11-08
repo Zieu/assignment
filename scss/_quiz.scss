@@ -51,10 +51,18 @@
 	}
 }
 
-.about-par {
-	text-align: center;
-	font-size: 28px;
-	width: 80vw;
-	margin: 50px auto;
-	font-weight: 700;
+.about {
+	&-heading {
+		text-align: center;
+		width: 80vw;
+		margin: auto;
+		margin-top: 40px;
+		font-size: 28px;
+	}
+	&-par {
+		width: 60vw;
+		text-align: center;
+		font-size: 24px;
+		margin: 30px auto;
+	}
 }
