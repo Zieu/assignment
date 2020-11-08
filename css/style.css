@@ -193,6 +193,12 @@
   font-weight: 500;
 }
 
+@media only screen and (max-width: 490px) {
+  .nav-list {
+    display: none;
+  }
+}
+
 .nav-list-item {
   position: relative;
   margin: 10px;
