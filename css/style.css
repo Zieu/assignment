@@ -152,23 +152,6 @@
   margin-right: 10px;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-body {
-  color: #212121;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .header {
   width: 100%;
   padding: 10px 30px;
@@ -442,6 +425,7 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
+  max-width: 1340px;
   padding: 30px;
 }
 
@@ -508,5 +492,22 @@ a {
   background: #212121;
   color: #fff;
   text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #212121;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
