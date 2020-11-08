@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header">
+			<img src="imgs/logo.svg" alt="Logo" class="header-logo" />
+			<nav class="nav">
+				<ul class="nav-list">
+					<a href="index.html">
+						<li class="nav-list-item">Home</li>
+					</a>
+					<a href="about.html">
+						<li class="nav-list-item">About me</li>
+					</a>
+					<a href="contacts.html">
+						<li class="nav-list-item nav-list-item-active">Contact me</li>
+					</a>
+				</ul>
+			</nav>
+			<a
+				class="header-github-link"
+				href="https://github.com/zieu"
+				target="blank"
+			>
+				<img src="imgs/github.svg" alt="Github" class="header-github-logo" />
+			</a>
+		</header>
+		<h2 class="contacts-heading">I love jokes!</h2>
+		<p class="contacts-description">Send me if you have one</p>
+
+		<form action="#" class="contacts-form">
+			<label for="name" class="contacts-label">Your name</label>
+			<input
+				type="text"
+				id="name"
+				class="contacts-input"
+				placeholder="e.g John Doe"
+			/>
+			<label for="email" class="contacts-label">Email</label>
+			<input
+				type="text"
+				id="email"
+				class="contacts-input"
+				placeholder="e.g johndoe@mail.com"
+			/>
+			<label for="msg" class="contacts-label">Your message</label>
+			<textarea
+				id="msg"
+				rows="6"
+				class="contacts-input contacts-textarea"
+				placeholder="..."
+			></textarea>
+			<input type="submit" value="Send" id="submit" class="contacts-button" />
+		</form>
+		<h3 class="contacts-heading">Socials</h3>
+		<div class="contacts-social-container">
+			<a href="https://github.com/zieu" class="contacts-social" target="blank">
+				<img
+					src="imgs/github.svg"
+					alt="Github"
+					class="contacts-social-img"
+				/><span class="contacts-social-text">Github</span>
+			</a>
+			<a href="https://t.me/zieuw" class="contacts-social" target="blank">
+				<img
+					src="imgs/tg.svg"
+					alt="Telegram"
+					class="contacts-social-img"
+				/><span class="contacts-social-text">Telegram</span>
+			</a>
+			<a href="tel:+998974214421" class="contacts-social">
+				<img
+					src="imgs/call.svg"
+					alt="phone"
+					class="contacts-social-img"
+					target="blank"
+				/><span class="contacts-social-text">Phone</span>
+			</a>
+			<a
+				href="https://instagram.com/djzieu"
+				class="contacts-social"
+				target="blank"
+			>
+				<img
+					src="imgs/insta.svg"
+					alt="Instagram"
+					class="contacts-social-img"
+				/><span class="contacts-social-text">Instagram</span>
+			</a>
+			<a
+				href="https://twitter.com/zieu15"
+				class="contacts-social contacts-social--center"
+				target="blank"
+			>
+				<img
+					src="imgs/twitter.svg"
+					alt="Twitter"
+					class="contacts-social-img"
+				/><span class="contacts-social-text">Twitter</span>
+			</a>
+		</div>
+		<footer class="footer">Ziyodulla &copy; 2020</footer>
+	</body>
+</html>

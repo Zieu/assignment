@@ -1,0 +1,254 @@
+@import "./quiz";
+@import "./contacts";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	color: #212121;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.header {
+	width: 100%;
+	padding: 10px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+	&-github-logo {
+		width: 37px;
+	}
+}
+
+.nav {
+	&-list {
+		display: flex;
+		list-style-type: none;
+		font-weight: 500;
+		&-item {
+			position: relative;
+			margin: 10px;
+			cursor: pointer;
+			transition: 0.3s ease;
+			&:hover {
+				color: #f3ac42;
+			}
+			&-active {
+				&::before {
+					content: "";
+					position: absolute;
+					width: 80%;
+					height: 4px;
+					background: #f3ac42;
+					bottom: -5px;
+					right: 50%;
+					transform: translateX(50%);
+					border-radius: 4px;
+					animation: active-link 0.3s ease;
+					@keyframes active-link {
+						from {
+							opacity: 0;
+							height: 0;
+						}
+						to {
+							opacity: 1;
+							height: 4px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.main {
+	padding: 0 180px;
+	min-height: 400px;
+	height: 90vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	&-about {
+		position: relative;
+	}
+	&-decoration {
+		width: 175px;
+		height: 250px;
+		background-image: url(../imgs/decoration.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		left: -180px;
+		bottom: 10px;
+		z-index: -9;
+	}
+	&-name {
+		font-size: 58px;
+		font-weight: 400;
+		font-family: "Sue Ellen Francisco", cursive;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 120px;
+			height: 5px;
+			background-color: #f3ac42;
+			bottom: 25px;
+			left: 16px;
+			border-radius: 5px;
+			z-index: -1;
+		}
+	}
+	&-description {
+		width: 50vw;
+		font-size: 38px;
+		font-weight: 600;
+		line-height: 57px;
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 260px;
+			height: 200px;
+			background: #f3ac42;
+			z-index: -99;
+			border-radius: 8px;
+			left: -80px;
+		}
+	}
+	&-action {
+		position: relative;
+		width: 240px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&-illustration {
+		width: 225px;
+		height: 220px;
+		background-image: url(../imgs/illustration.png);
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: relative;
+		margin-bottom: 20px;
+	}
+	&-button {
+		display: flex;
+		justify-content: space-between;
+		width: 240px;
+		padding: 12px 20px 12px 45px;
+		background: #212121;
+		border-radius: 8px;
+		font-size: 18px;
+		color: #ffffff;
+		transition: background 0.2s ease, color 0.3s ease;
+		path {
+			transition: fill 0.3s ease;
+		}
+		&:hover {
+			background: #f3ac42;
+			color: #212121;
+			& path {
+				fill: #212121;
+			}
+		}
+		img {
+			margin-left: 5px;
+		}
+	}
+}
+
+.interests {
+	min-height: 300px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 20px;
+	&-title {
+		font-family: "Sue Ellen Francisco", cursive;
+		font-size: 48px;
+		position: relative;
+		margin-bottom: 20px;
+		&::before {
+			content: "";
+			position: absolute;
+			width: 120px;
+			height: 4px;
+			background: #f3ac42;
+			bottom: 15px;
+			right: 50%;
+			transform: translateX(50%);
+			border-radius: 4px;
+		}
+	}
+	&-description {
+		text-align: center;
+		font-size: 28px;
+		width: 650px;
+	}
+	&-card {
+		height: 250px;
+		&s {
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			width: 100%;
+			padding: 30px;
+		}
+		width: 295px;
+		border: 1px solid #eee;
+		border-radius: 8px;
+		transition: 0.3s ease;
+		&:hover {
+			box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
+			transform: translateY(-5px);
+		}
+		&-title {
+			padding: 20px;
+			border-bottom: 2px solid #eee;
+			display: flex;
+			justify-content: space-between;
+		}
+		&:hover &-img {
+			filter: grayscale(0) contrast(1) opacity(1);
+		}
+		&-img {
+			filter: grayscale(1) contrast(0.7) opacity(0.8);
+			transition: filter 0.5s ease;
+		}
+		&-and {
+			font-size: 24px;
+			color: #555;
+		}
+		&-content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: calc(100% - 67px);
+			padding: 0 40px;
+			&--center {
+				justify-content: center;
+			}
+		}
+	}
+}
+.footer {
+	width: 100%;
+	padding: 20px 0;
+	background: #212121;
+	color: #fff;
+	text-align: center;
+}
