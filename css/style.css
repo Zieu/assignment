@@ -184,8 +184,8 @@
   position: relative;
   margin: 10px;
   cursor: pointer;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .nav-list-item:hover {
