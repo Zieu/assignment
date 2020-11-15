@@ -1,3 +1,377 @@
+.header {
+  width: 100%;
+  padding: 10px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.header-github-logo {
+  width: 37px;
+}
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 490px) {
+  .nav-list {
+    display: none;
+  }
+}
+
+.nav-list-item {
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.nav-list-item:hover {
+  color: #f3ac42;
+}
+
+.nav-list-item-active::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 4px;
+  background: #f3ac42;
+  bottom: -5px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  border-radius: 4px;
+  -webkit-animation: active-link 0.3s ease;
+          animation: active-link 0.3s ease;
+}
+
+@-webkit-keyframes active-link {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 4px;
+  }
+}
+
+@keyframes active-link {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 4px;
+  }
+}
+
+.main {
+  padding: 0 180px;
+  min-height: 400px;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (max-width: 1192px) {
+  .main {
+    height: 70vh;
+    min-height: 1000px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 20px !important;
+  }
+}
+
+.main-about {
+  position: relative;
+}
+
+.main-decoration {
+  width: 175px;
+  height: 250px;
+  background-image: url(../imgs/decoration.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: -180px;
+  bottom: 10px;
+  z-index: -9;
+}
+
+.main-name {
+  font-size: 58px;
+  font-weight: 400;
+  font-family: "Sue Ellen Francisco", cursive;
+  position: relative;
+}
+
+.main-name::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 5px;
+  background-color: #f3ac42;
+  bottom: 25px;
+  left: 16px;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.main-description {
+  width: 50vw;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 57px;
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .main-description {
+    width: 90vw;
+  }
+}
+
+.main-description::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 200px;
+  background: #f3ac42;
+  z-index: -99;
+  border-radius: 8px;
+  left: -80px;
+}
+
+.main-action {
+  position: relative;
+  width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-illustration {
+  width: 225px;
+  height: 220px;
+  background-image: url(../imgs/illustration.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.main-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 240px;
+  padding: 12px 20px 12px 45px;
+  background: #212121;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #ffffff;
+  -webkit-transition: background 0.2s ease, color 0.3s ease;
+  transition: background 0.2s ease, color 0.3s ease;
+}
+
+.main-button path {
+  -webkit-transition: fill 0.3s ease;
+  transition: fill 0.3s ease;
+}
+
+.main-button:hover {
+  background: #f3ac42;
+  color: #212121;
+}
+
+.main-button:hover path {
+  fill: #212121;
+}
+
+.main-button img {
+  margin-left: 5px;
+}
+
+.interests {
+  min-height: 300px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.interests-title {
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 48px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.interests-title::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 4px;
+  background: #f3ac42;
+  bottom: 15px;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  border-radius: 4px;
+}
+
+.interests-description {
+  text-align: center;
+  font-size: 28px;
+  width: 70vw;
+}
+
+.interests-card {
+  height: 250px;
+  width: 295px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.interests-cards {
+  gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 1340px;
+  padding: 30px;
+}
+
+@media (max-width: 1300px) {
+  .interests-cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.interests-card:hover {
+  -webkit-box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.interests-card-title {
+  padding: 20px;
+  border-bottom: 2px solid #eee;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.interests-card:hover .interests-card-img {
+  -webkit-filter: grayscale(0) contrast(1) opacity(1);
+          filter: grayscale(0) contrast(1) opacity(1);
+}
+
+.interests-card-img {
+  -webkit-filter: grayscale(1) contrast(0.7) opacity(0.8);
+          filter: grayscale(1) contrast(0.7) opacity(0.8);
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
+}
+
+.interests-card-and {
+  font-size: 24px;
+  color: #555;
+}
+
+.interests-card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: calc(100% - 67px);
+  padding: 0 40px;
+}
+
+.interests-card-content--center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  background: #212121;
+  color: #fff;
+  text-align: center;
+}
+
 #quiz {
   font-family: sans-serif;
   color: #212121;
@@ -163,354 +537,6 @@
 .contacts-social-img {
   width: 35px;
   margin-right: 10px;
-}
-
-.header {
-  width: 100%;
-  padding: 10px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-}
-
-.header-github-logo {
-  width: 37px;
-}
-
-.nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style-type: none;
-  font-weight: 500;
-}
-
-@media only screen and (max-width: 490px) {
-  .nav-list {
-    display: none;
-  }
-}
-
-.nav-list-item {
-  position: relative;
-  margin: 10px;
-  cursor: pointer;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.nav-list-item:hover {
-  color: #f3ac42;
-}
-
-.nav-list-item-active::before {
-  content: "";
-  position: absolute;
-  width: 80%;
-  height: 4px;
-  background: #f3ac42;
-  bottom: -5px;
-  right: 50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-  border-radius: 4px;
-  -webkit-animation: active-link 0.3s ease;
-          animation: active-link 0.3s ease;
-}
-
-@-webkit-keyframes active-link {
-  from {
-    opacity: 0;
-    height: 0;
-  }
-  to {
-    opacity: 1;
-    height: 4px;
-  }
-}
-
-@keyframes active-link {
-  from {
-    opacity: 0;
-    height: 0;
-  }
-  to {
-    opacity: 1;
-    height: 4px;
-  }
-}
-
-.main {
-  padding: 0 180px;
-  min-height: 400px;
-  height: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.main-about {
-  position: relative;
-}
-
-.main-decoration {
-  width: 175px;
-  height: 250px;
-  background-image: url(../imgs/decoration.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: absolute;
-  left: -180px;
-  bottom: 10px;
-  z-index: -9;
-}
-
-.main-name {
-  font-size: 58px;
-  font-weight: 400;
-  font-family: "Sue Ellen Francisco", cursive;
-  position: relative;
-}
-
-.main-name::before {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 5px;
-  background-color: #f3ac42;
-  bottom: 25px;
-  left: 16px;
-  border-radius: 5px;
-  z-index: -1;
-}
-
-.main-description {
-  width: 50vw;
-  font-size: 38px;
-  font-weight: 600;
-  line-height: 57px;
-  position: relative;
-}
-
-.main-description::before {
-  content: "";
-  position: absolute;
-  width: 260px;
-  height: 200px;
-  background: #f3ac42;
-  z-index: -99;
-  border-radius: 8px;
-  left: -80px;
-}
-
-.main-action {
-  position: relative;
-  width: 240px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.main-illustration {
-  width: 225px;
-  height: 220px;
-  background-image: url(../imgs/illustration.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.main-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 240px;
-  padding: 12px 20px 12px 45px;
-  background: #212121;
-  border-radius: 8px;
-  font-size: 18px;
-  color: #ffffff;
-  -webkit-transition: background 0.2s ease, color 0.3s ease;
-  transition: background 0.2s ease, color 0.3s ease;
-}
-
-.main-button path {
-  -webkit-transition: fill 0.3s ease;
-  transition: fill 0.3s ease;
-}
-
-.main-button:hover {
-  background: #f3ac42;
-  color: #212121;
-}
-
-.main-button:hover path {
-  fill: #212121;
-}
-
-.main-button img {
-  margin-left: 5px;
-}
-
-.interests {
-  min-height: 300px;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.interests-title {
-  font-family: "Sue Ellen Francisco", cursive;
-  font-size: 48px;
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.interests-title::before {
-  content: "";
-  position: absolute;
-  width: 120px;
-  height: 4px;
-  background: #f3ac42;
-  bottom: 15px;
-  right: 50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-  border-radius: 4px;
-}
-
-.interests-description {
-  text-align: center;
-  font-size: 28px;
-  width: 650px;
-}
-
-.interests-card {
-  height: 250px;
-  width: 295px;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  -webkit-transition: 0.3s ease;
-  transition: 0.3s ease;
-}
-
-.interests-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  max-width: 1340px;
-  padding: 30px;
-}
-
-.interests-card:hover {
-  -webkit-box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-}
-
-.interests-card-title {
-  padding: 20px;
-  border-bottom: 2px solid #eee;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.interests-card:hover .interests-card-img {
-  -webkit-filter: grayscale(0) contrast(1) opacity(1);
-          filter: grayscale(0) contrast(1) opacity(1);
-}
-
-.interests-card-img {
-  -webkit-filter: grayscale(1) contrast(0.7) opacity(0.8);
-          filter: grayscale(1) contrast(0.7) opacity(0.8);
-  -webkit-transition: -webkit-filter 0.5s ease;
-  transition: -webkit-filter 0.5s ease;
-  transition: filter 0.5s ease;
-  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
-}
-
-.interests-card-and {
-  font-size: 24px;
-  color: #555;
-}
-
-.interests-card-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: calc(100% - 67px);
-  padding: 0 40px;
-}
-
-.interests-card-content--center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.footer {
-  width: 100%;
-  padding: 20px 0;
-  background: #212121;
-  color: #fff;
-  text-align: center;
 }
 
 * {
