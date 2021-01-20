@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sue+Ellen+Francisco&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script async src="scripts/nav.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GQ8XNWN3JZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-GQ8XNWN3JZ");
+    </script>
+
+    <title>Ziyodulla Muydinjanov</title>
+  </head>
+
+  <body>
+    <div class="mobile-nav">
+      <img
+        src="imgs/close.svg"
+        class="mobile-nav-close"
+        onclick="closeBurgerMenu()"
+        alt="close button"
+      />
+      <div class="mobile-nav-links">
+        <a href="index.html"> Home </a>
+        <a href="about.html"> About me </a>
+        <a href="contacts.html"> Contact me </a>
+        <a href="gallery.html"> Gallery </a>
+      </div>
+    </div>
+    <div class="overlay"></div>
+    <header class="header">
+      <a href="index.html">
+        <img src="imgs/logo.svg" alt="Logo" class="header-logo"
+      /></a>
+      <div class="burger">
+        <div class="burger-lines"></div>
+        <div class="burger-lines"></div>
+        <div class="burger-lines"></div>
+      </div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="nav-list-item"><a href="about.html">About me</a></li>
+          <li class="nav-list-item"><a href="contacts.html">Contact me</a></li>
+          <li class="nav-list-item nav-list-item-active">
+            <a href="gallery.html">Gallery</a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        class="header-github-link"
+        href="https://github.com/zieu"
+        target="blank"
+      >
+        <img src="imgs/github.svg" alt="Github" class="header-github-logo" />
+      </a>
+    </header>
+    <section class="gallery">
+      <h2 class="gallery-heading">A gallery with my favourite images</h2>
+        <div class="gallery-cards">
+          <div class="gallery-card">
+              <div class="gallery-card-content">
+                  
+            </div>
+            <div class="gallery-card-title">
+              <span>Coding</span
+              ><img src="imgs/computer-icon.svg" alt="pc icon" />
+            </div>
+          </div>
+          <div class="gallery-card">
+              <div class="gallery-card-content">
+                  
+            </div>
+            <div class="gallery-card-title">
+              <span>Design</span
+              ><img src="imgs/design-icon.svg" alt="design icon" />
+            </div>
+          </div>
+          <div class="gallery-card">
+              <div class="gallery-card-content">
+                  
+            </div>
+            <div class="gallery-card-title">
+              <span>Learning</span
+              ><img src="imgs/learning-icon.svg" alt="learn icon" />
+            </div>
+          </div>
+
+        
+          </div>
+        </div>
+      </section>
+    </section>
+    <footer class="footer">Ziyodulla &copy; 2020</footer>
+  </body>
+</html>

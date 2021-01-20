@@ -1,20 +1,21 @@
-@import "./home";
-@import "./quiz";
-@import "./contacts";
-@import "./burger";
+@import "home";
+@import "quiz";
+@import "contacts";
+@import "burger";
+@import "gallery";
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-	color: #212121;
+  color: #212121;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
