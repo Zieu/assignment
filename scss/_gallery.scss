@@ -12,14 +12,17 @@
     margin-top: 50px;
   }
   &-card {
-    height: 250px;
+    cursor: pointer;
+    &-img {
+      transition: filter 0.3s ease;
+    }
+    &:hover &-img {
+      filter: brightness(0.85);
+    }
     &s {
-      @media (max-width: 1300px) {
-        justify-content: center;
-      }
+      justify-content: center;
       margin: auto;
       display: flex;
-      justify-content: space-between;
       flex-wrap: wrap;
       width: 100%;
       max-width: 1340px;
@@ -32,34 +35,47 @@
     transition: 0.3s ease;
     &:hover {
       box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
-      transform: translateY(-5px);
     }
     &-title {
-      padding: 20px;
-      border-top: 2px solid #eee;
+      padding: 15px;
       display: flex;
+      font-size: 18px;
+      align-items: center;
       justify-content: space-between;
     }
-    &:hover &-img {
-      filter: grayscale(0) contrast(1) opacity(1);
-    }
-    &-img {
-      filter: grayscale(1) contrast(0.7) opacity(0.8);
-      transition: filter 0.5s ease;
-    }
-    &-and {
-      font-size: 24px;
-      color: #555;
+    &-line {
+      width: 94%;
+      height: 1px;
+      margin: 0 auto;
+      background-color: #eee;
     }
     &-content {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: calc(100% - 67px);
-      padding: 0 40px;
-      &--center {
-        justify-content: center;
-      }
+      padding: 8px;
+      height: 200px;
+    }
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px 5px 0 0;
+    }
+  }
+  &-theme-toggler {
+    width: 35px;
+    height: 35px;
+    border: 0;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e8f5ff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    &:hover {
+      background: #d4e8f7;
     }
   }
 }
