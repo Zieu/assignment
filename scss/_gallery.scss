@@ -7,6 +7,10 @@
   width: 100%;
   margin-bottom: 20px;
   padding: 15px;
+  &-lightbox {
+    width: 100%;
+    height: 100%;
+  }
   &-heading {
     text-align: center;
     font-size: 32px;
@@ -17,21 +21,30 @@
     cursor: pointer;
     overflow: hidden;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.08);
-    &-img {
-      transition: filter 0.2s ease;
-      position: relative;
-    }
-    &:hover &-img {
-      filter: brightness(0.85);
-      &::before {
-        content: "";
+    position: relative;
+    &-resize-icon {
         position: absolute;
         background-image: url("../imgs/maximize.svg");
         background-repeat: no-repeat;
         background-position: center;
+        z-index: 99;
         width: 100%;
         height: 100%;
-      }
+        top: 38%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+    &-img {
+      transition: filter 0.3s ease;
+      position: relative;
+    }
+    &:hover &-img {
+      filter: brightness(0.85);
+    }
+    &:hover .gallery-card-resize-icon {
+      opacity: 0.8;
     }
     &s {
       justify-content: center;
