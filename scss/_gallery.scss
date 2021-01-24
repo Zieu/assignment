@@ -26,11 +26,11 @@
         position: absolute;
         background-image: url("../imgs/maximize.svg");
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: 50% 42%;
         z-index: 99;
         width: 100%;
-        height: 80%;
-        top: 38%;
+        height: 78%;
+        top: 42%;
         left: 50%;
         transform: translate(-50%, -50%);
         opacity: 0;
@@ -43,7 +43,7 @@
     &:hover &-img {
       filter: brightness(0.85);
     }
-    &:hover .gallery-card-resize-icon {
+    & a:hover .gallery-card-resize-icon {
       opacity: 0.8;
     }
     &s {
