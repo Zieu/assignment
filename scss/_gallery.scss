@@ -38,7 +38,6 @@
       top: 35%;
       transform: translate(-50%, -50%);
       left: 50%;
-      transition: opacity 0.2s ease;
       opacity: 0;
       transition: opacity 0.2s ease;
     }
@@ -86,13 +85,11 @@
       align-items: center;
       transition: background 0.2s ease;
       justify-content: space-between;
-      transition: background 0.2s ease;
     }
     &-line {
       width: 94%;
       height: 1px;
       margin: 0 auto;
-      transition: 0.2s ease;
       background-color: #ccc;
       transition: 0.2s ease;
     }
@@ -150,7 +147,6 @@
     cursor: pointer;
     transition: background 0.2s ease;
     outline: none;
-    transition: background 0.2s ease;
     &:hover {
       background-color: #d4e8f7;
       background-image: url("../imgs/moon.svg");

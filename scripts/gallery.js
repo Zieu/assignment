@@ -86,6 +86,7 @@ galleryData.map((image) => {
   </div>
   </div>
   `;
+
   cardContainer.innerHTML += templete;
 });
 
