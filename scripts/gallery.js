@@ -62,7 +62,7 @@ const galleryData = JSON.parse(galleryDataJSON);
 const cardContainer = document.querySelector(".gallery-cards");
 
 galleryData.map((image) => {
-  cardContainer.innerHTML += `
+  const templete = `
   <div class="gallery-card ${
     image.theme === "dark" ? "gallery-card--dark" : ""
   }">
@@ -86,6 +86,7 @@ galleryData.map((image) => {
   </div>
   </div>
   `;
+  cardContainer.innerHTML += templete;
 });
 
 galleryData.map(({ id }) => {

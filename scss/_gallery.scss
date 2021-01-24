@@ -18,23 +18,27 @@
     margin-bottom: 30px;
   }
   &-card {
+    &--dark {
+      background-color: #212121;
+    }
+    transition: background 0.3s ease;
     cursor: pointer;
     overflow: hidden;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.08);
     position: relative;
     &-resize-icon {
-        position: absolute;
-        background-image: url("../imgs/maximize.svg");
-        background-repeat: no-repeat;
-        background-position: 50% 42%;
-        z-index: 99;
-        width: 100%;
-        height: 78%;
-        top: 42%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        opacity: 0;
-        transition: opacity 0.2s ease;
+      position: absolute;
+      background-image: url("../imgs/maximize.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 99;
+      width: 95%;
+      height: 190px;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.2s ease;
     }
     &-img {
       transition: filter 0.3s ease;
@@ -86,8 +90,8 @@
       width: 94%;
       height: 1px;
       margin: 0 auto;
-      background-color: #eee;
-      transition: background 0.2s ease, width 0.2s ease;
+      background-color: #ccc;
+      transition: 0.2s ease;
     }
     &-content {
       display: flex;
@@ -95,7 +99,6 @@
       align-items: center;
       padding: 8px;
       height: 200px;
-      transition: background 0.2s ease;
     }
     &-text {
       transition: color 0.2s ease;
@@ -107,16 +110,10 @@
       border-radius: 5px 5px 0 0;
     }
     &--dark {
-      .gallery-card-title-wrapper {
-        background: #212121;
-      }
       .gallery-card-line {
-        background-color: #444;
-        width: 100%;
+        background-color: #555;
       }
-      .gallery-card-content {
-        background-color: #212121;
-      }
+
       .gallery-theme-toggler {
         background-color: #323538;
         background-image: url("../imgs/sun.svg");
@@ -126,8 +123,8 @@
         &:hover {
           background-color: #44474b;
           background-image: url("../imgs/sun.svg");
-          background-repeat: no-repeat;
           background-position: center;
+          background-repeat: no-repeat;
         }
       }
       .gallery-card-text {
