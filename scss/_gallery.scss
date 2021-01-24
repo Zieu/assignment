@@ -20,8 +20,9 @@
   &-card {
     &--dark {
       background-color: #212121;
+      transition: 0.2s ease;
     }
-    transition: background 0.3s ease;
+    transition: 0.2s ease;
     cursor: pointer;
     overflow: hidden;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.08);
@@ -35,8 +36,9 @@
       width: 95%;
       height: 190px;
       top: 35%;
-      left: 50%;
       transform: translate(-50%, -50%);
+      left: 50%;
+      transition: opacity 0.2s ease;
       opacity: 0;
       transition: opacity 0.2s ease;
     }
@@ -73,16 +75,16 @@
     }
     border: 1px solid #eee;
     border-radius: 8px;
-    transition: box-shadow 0.2s ease;
-    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
     &:hover {
-      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.12);
     }
     &-title-wrapper {
       padding: 15px;
       display: flex;
       font-size: 18px;
       align-items: center;
+      transition: background 0.2s ease;
       justify-content: space-between;
       transition: background 0.2s ease;
     }
@@ -90,6 +92,7 @@
       width: 94%;
       height: 1px;
       margin: 0 auto;
+      transition: 0.2s ease;
       background-color: #ccc;
       transition: 0.2s ease;
     }
@@ -145,6 +148,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: background 0.2s ease;
     outline: none;
     transition: background 0.2s ease;
     &:hover {
