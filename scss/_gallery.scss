@@ -17,7 +17,7 @@
     cursor: pointer;
     overflow: hidden;
     &-img {
-      transition: filter 0.3s ease;
+      transition: filter 0.2s ease;
     }
     &:hover &-img {
       filter: brightness(0.85);
@@ -45,39 +45,36 @@
     }
     border: 1px solid #eee;
     border-radius: 8px;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.03);
     &:hover {
-      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
     }
     &-title-wrapper {
-      &--dark {
-        background: #242729;
-      }
       padding: 15px;
       display: flex;
       font-size: 18px;
       align-items: center;
       justify-content: space-between;
+      transition: background 0.2s ease;
     }
     &-line {
       width: 94%;
       height: 1px;
       margin: 0 auto;
       background-color: #eee;
-      &--dark {
-        background-color: #444;
-        width: 100%;
-      }
+      transition: background 0.2s ease, width 0.2s ease;
     }
     &-content {
-      &--dark {
-        background-color: #242729;
-      }
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 8px;
       height: 200px;
+      transition: background 0.2s ease;
+    }
+    &-text {
+      transition: color 0.2s ease;
     }
     &-img {
       width: 100%;
@@ -85,8 +82,31 @@
       object-fit: cover;
       border-radius: 5px 5px 0 0;
     }
-    &-text {
-      &--dark {
+    &--dark {
+      .gallery-card-title-wrapper {
+        background: #212121;
+      }
+      .gallery-card-line {
+        background-color: #444;
+        width: 100%;
+      }
+      .gallery-card-content {
+        background-color: #212121;
+      }
+      .gallery-theme-toggler {
+        background-color: #323538;
+        background-image: url("../imgs/sun.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 20px;
+        &:hover {
+          background-color: #44474b;
+          background-image: url("../imgs/sun.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+      .gallery-card-text {
         color: #fff;
       }
     }
@@ -104,19 +124,13 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    outline: none;
     transition: background 0.2s ease;
     &:hover {
       background-color: #d4e8f7;
       background-image: url("../imgs/moon.svg");
       background-repeat: no-repeat;
       background-position: center;
-    }
-    &--dark {
-      background-color: #323538;
-      background-image: url("../imgs/sun.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 20px;
     }
   }
 }
