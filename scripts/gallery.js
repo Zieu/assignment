@@ -18,7 +18,7 @@ const galleryData = [
     "source": "https://images.unsplash.com/photo-1532982116380-02ce47a3e03c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2000&q=60",
     "thumb": "https://images.unsplash.com/photo-1532982116380-02ce47a3e03c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHw%3D&auto=format&fit=crop&w=300&q=60",
     "theme": "light",
-    "id": 1    
+    "id": 2   
   },
   {
       "title": "Ocean",
